@@ -8,6 +8,15 @@
     "require": "./dist/lib/index.cjs"
   },
   "types": "./dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuzheng14/utils"
+  },
+  "homepage": "https://github.com/yuzhneg14/utils",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && npm run build:types",
