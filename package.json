@@ -23,8 +23,7 @@
     "build": "tsc && vite build && npm run build:types",
     "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
     "preview": "vite preview",
-    "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
