@@ -23,7 +23,11 @@
     "build": "tsc && vite build && npm run build:types",
     "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "build",
+    "publish:major": "bumpp major && publish",
+    "publish:minor": "bumpp minor && publish",
+    "publish:patch": "bumpp patch && publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
