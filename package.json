@@ -1,7 +1,7 @@
 {
   "name": "@yuzheng14/utils",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "./dist/lib/index.cjs",
   "exports": {
@@ -24,10 +24,10 @@
     "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
     "preview": "vite preview",
     "prepare": "husky install",
-    "prepublishOnly": "build",
-    "publish:major": "bumpp major && publish",
-    "publish:minor": "bumpp minor && publish",
-    "publish:patch": "bumpp patch && publish"
+    "prepublishOnly": "pnpm build",
+    "publish:major": "bumpp major && pnpm publish",
+    "publish:minor": "bumpp minor && pnpm publish",
+    "publish:patch": "bumpp patch && pnpm publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
