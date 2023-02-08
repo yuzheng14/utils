@@ -1,8 +1,9 @@
 {
   "name": "@yuzheng14/utils",
-  "private": true,
+  "private": false,
   "version": "0.0.2",
   "type": "module",
+  "main": "./dist/lib/index.cjs",
   "exports": {
     "import": "./dist/es/index.js",
     "require": "./dist/lib/index.cjs"
