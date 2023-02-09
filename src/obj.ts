@@ -4,9 +4,9 @@
  * @param defaultValue 默认值对象
  * @returns 原对象
  */
-export function assignObjDefaultValue<T extends object>(obj: T, defaultValue: T): T {
+export function assignObjDefaultValue<T extends object>(obj: Record<string, unknown>, defaultValue: T): T {
   for (const key in defaultValue) {
     obj[key] === undefined && (obj[key] = defaultValue[key])
   }
-  return obj
+  return obj as T
 }
