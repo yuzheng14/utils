@@ -4,10 +4,11 @@
  * @param defaultValue 默认值对象
  * @returns 原对象
  */
-export function assignObjDefaultValue<T extends object>(obj: Record<string, unknown>, defaultValue: T): T {
-  for (const key in defaultValue) {
-    obj[key] === undefined && (obj[key] = defaultValue[key])
-  }
+export function assignObjDefaultValue<T extends object>(obj: object, defaultValue: T): T {
+  Object.entries(defaultValue).forEach(
+    ([key, value]) =>
+      (obj as Record<string, unknown>)[key] === undefined && ((obj as Record<string, unknown>)[key] = value)
+  )
   return obj as T
 }
 
@@ -16,6 +17,6 @@ export function assignObjDefaultValue<T extends object>(obj: Record<string, unkn
  * @param obj
  * @returns
  */
-export function deepCopyPropsOfObj(obj: Record<string, unknown>): Record<string, unknown> {
+export function deepCopyPropsOfObj(obj: object): Record<string, unknown> {
   return JSON.parse(JSON.stringify(obj))
 }
