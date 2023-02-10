@@ -10,3 +10,12 @@ export function assignObjDefaultValue<T extends object>(obj: Record<string, unkn
   }
   return obj as T
 }
+
+/**
+ * 深拷贝对象的属性（不拷贝方法）
+ * @param obj
+ * @returns
+ */
+export function deepCopyPropsOfObj(obj: Record<string, unknown>): Record<string, unknown> {
+  return JSON.parse(JSON.stringify(obj))
+}
