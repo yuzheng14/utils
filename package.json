@@ -25,11 +25,11 @@
     "build:types": "tsc -p tsconfig.types.json && tsc-alias -p tsconfig.types.json",
     "preview": "vite preview",
     "prepare": "husky install",
-    "prepublishOnly": "pnpm build && nrm use npm",
+    "prepublishOnly": "pnpm build && pnpm nrm use npm",
     "publish:major": "bumpp major && pnpm publish",
     "publish:minor": "bumpp minor && pnpm publish",
     "publish:patch": "bumpp patch && pnpm publish",
-    "postpublish": "nrm use taobao"
+    "postpublish": "pnpm nrm use taobao"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
