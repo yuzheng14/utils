@@ -29,7 +29,8 @@
     "publish:major": "bumpp major && pnpm publish",
     "publish:minor": "bumpp minor && pnpm publish",
     "publish:patch": "bumpp patch && pnpm publish",
-    "postpublish": "npx nrm use taobao"
+    "postpublish": "npx nrm use taobao",
+    "test": "vitest"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
@@ -46,6 +47,7 @@
     "prettier": "^2.8.3",
     "tsc-alias": "^1.8.2",
     "typescript": "^4.9.3",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "vitest": "^0.28.4"
   }
 }
