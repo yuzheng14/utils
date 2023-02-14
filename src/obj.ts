@@ -13,6 +13,17 @@ export function assignObjDefaultValue<T extends object>(obj: object, defaultValu
 }
 
 /**
+ * 使用对象给对象赋值
+ * @param obj 要赋值的对象
+ * @param value 要赋的值
+ * @returns 要赋值对象的引用
+ */
+export function assignObjValue<T extends object>(obj: T, value: Partial<T>): T {
+  Object.entries(value).forEach(([key, val]) => ((obj as Record<string, unknown>)[key] = val))
+  return obj
+}
+
+/**
  * 深拷贝对象的属性（不拷贝方法）
  * @param obj
  * @returns
