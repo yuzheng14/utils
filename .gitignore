@@ -25,3 +25,6 @@ dist-ssr
 
 # api-extractor 临时文件目录
 temp
+
+# vitest coverage 报告
+coverage

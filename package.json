@@ -21,14 +21,11 @@
   ],
   "scripts": {
     "build": "rimraf dist && vite build && api-extractor run",
-    "preview": "vite preview",
     "prepare": "husky install",
-    "prepublishOnly": "pnpm build && bash scripts/prePublish.sh",
     "publish:major": "bumpp major && pnpm publish",
     "publish:minor": "bumpp minor && pnpm publish",
     "publish:patch": "bumpp patch && pnpm publish",
-    "postpublish": "bash scripts/postPublish.sh",
-    "test": "vitest run"
+    "test": "vitest run --coverage"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
@@ -37,6 +34,7 @@
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
+    "@vitest/coverage-v8": "^1.2.2",
     "bumpp": "^8.2.1",
     "cz-git": "^1.4.1",
     "czg": "^1.4.1",
