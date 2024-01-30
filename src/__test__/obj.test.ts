@@ -12,6 +12,9 @@ describe('obj.ts', () => {
       password: '123456',
       username: 'test',
     }
-    expect(assignObjValue(user, { password: 'msun' })).toEqual({ password: 'msun', username: 'test' })
+    expect(assignObjValue(user, { password: 'msun' })).toEqual({
+      password: 'msun',
+      username: 'test',
+    })
   })
 })
