@@ -1,3 +1,12 @@
+# [1.0.0](https://github.com/yuzheng14/utils/compare/v0.2.0...v1.0.0) (2024-01-30)
+
+
+### Features
+
+* **utilityType:** :sparkles: 增加 RequiredKeys 类型 ([26036d4](https://github.com/yuzheng14/utils/commit/26036d428f0b449b1a01ac06c4371f1170672c7b))
+
+
+
 # [0.2.0](https://github.com/yuzheng14/utils/compare/v0.1.1...v0.2.0) (2023-02-14)
 
 ### Features
