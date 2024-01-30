@@ -2,7 +2,8 @@ import { throttle } from '@/utils'
 
 /**
  * 阻塞进程工具函数
- * @param time
+ * @param time - 阻塞时间
+ * @public
  */
 export function sleep(time: number) {
   const now = Date.now()
