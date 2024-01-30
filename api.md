@@ -16,7 +16,7 @@ export function deepCopyPropsOfObj(obj: object): Record<string, unknown>;
 // @public
 export type RequiredKeys<T, K extends keyof T> = {
     [key in K]-?: T[key];
-} & T;
+} & Omit<T, K>;
 
 // @public
 export function sleep(time: number): void;
