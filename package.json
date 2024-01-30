@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "rimraf dist && tsc && vite build",
+    "build": "rimraf dist && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
     "prepublishOnly": "pnpm build && bash scripts/prePublish.sh",

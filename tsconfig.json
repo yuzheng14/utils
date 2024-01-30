@@ -12,17 +12,16 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
     },
     "emitDeclarationOnly": true,
     "declaration": true,
     "declarationMap": true,
     "declarationDir": "dist/typings/",
-    "rootDir": "src"
   },
   "references": [
     {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+      "path": "./tsconfig.node.json",
+    },
+  ],
 }
