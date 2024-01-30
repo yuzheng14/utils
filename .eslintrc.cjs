@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  ignoredPatterns: ['.eslintrc.cjs'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
