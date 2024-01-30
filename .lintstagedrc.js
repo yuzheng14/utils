@@ -11,7 +11,7 @@ const removeIgnoredFiles = async (files) => {
   const isIgnored = await Promise.all(
     files.map((file) => {
       return eslint.isPathIgnored(file)
-    })
+    }),
   )
   // 根据 isIgnored 数组过滤文件
   const filteredFiles = files.filter((_, i) => !isIgnored[i])
@@ -22,9 +22,7 @@ const removeIgnoredFiles = async (files) => {
 export default {
   // 用 prettier 进行格式化并直接覆盖文件
   // 因为 eslint 不会覆盖文件所有放心覆盖
-  '*.{js,jsx,ts,tsx,vue,css,less,scss,sass,html,json,yaml,md}': [
-    'prettier --write',
-  ],
+  '*.{js,jsx,ts,tsx,vue,css,less,scss,sass,html,json,yaml}': ['prettier --write'],
   // 对于 js 或者 ts 文件使用 eslint 进行审查
   'src/**/*.{js,jsx,ts,tsx,vue}': async (files) => {
     const filesToLint = await removeIgnoredFiles(files)
