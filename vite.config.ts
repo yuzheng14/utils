@@ -13,11 +13,6 @@ export default defineConfig({
       fileName: 'index',
     },
   },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-    },
-  },
   plugins: [
     // 在 plugin 中使用 vite 的 hook 生成 typescript 声明文件
     {

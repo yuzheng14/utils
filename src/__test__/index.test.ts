@@ -1,4 +1,4 @@
-import * as all from '@/index'
+import * as all from '../index'
 import { describe, it, expect } from 'vitest'
 
 describe('函数导出测试', () => {

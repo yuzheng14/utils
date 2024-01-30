@@ -1,4 +1,4 @@
-import { throttle } from '@/utils'
+import { throttle } from './utils'
 
 /**
  * 阻塞进程工具函数

@@ -1,4 +1,4 @@
-import { assignObjValue } from '@/obj'
+import { assignObjValue } from '../obj'
 import { describe, expect, it } from 'vitest'
 
 interface User {
