@@ -3,11 +3,11 @@
   "private": false,
   "version": "1.0.1",
   "type": "module",
-  "main": "./dist/lib/index.cjs",
+  "main": "./dist/es/index.js",
   "module": "./dist/es/index.js",
   "exports": {
-    "import": "./dist/es/index.js",
-    "types": "./dist/index.d.ts"
+    ".": "./dist/index.js",
+    "./kotlin": "./dist/kotlin.js"
   },
   "types": "./dist/types/index.d.ts",
   "repository": {
