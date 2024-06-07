@@ -20,7 +20,7 @@
     "src"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "tsc && vite build",
     "prepare": "husky install",
     "test": "vitest run --coverage"
   },
