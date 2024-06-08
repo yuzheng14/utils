@@ -21,10 +21,8 @@ export function throttle(fn: () => void, interval: number) {
  * @param start - the start of the range
  * @param end - the end of the range
  */
-export function range(end: number): Iterable<number>
-export function range(start: number, end: number): Iterable<number>
-export function range(start: number, end?: number): Iterable<number> {
-  return (function* () {
-    for (let i = present(end) ? start : 0; i < (end ?? start); i++) yield i
-  })()
+export function range(end: number): IterableIterator<number>
+export function range(start: number, end: number): IterableIterator<number>
+export function* range(start: number, end?: number): IterableIterator<number> {
+  for (let i = present(end) ? start : 0; i < (end ?? start); i++) yield i
 }

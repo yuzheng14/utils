@@ -13,5 +13,7 @@ describe('utils', () => {
     expect([...range(5)]).toEqual([0, 1, 2, 3, 4])
     expect([...range(1, 5)]).toEqual([1, 2, 3, 4])
     expect(range(3)).toBeInstanceOf(Iterator)
+    expect(range(3)[Symbol.iterator]()).toBeInstanceOf(Iterator)
+    expect([...range(3)[Symbol.iterator]()]).toEqual([0, 1, 2])
   })
 })

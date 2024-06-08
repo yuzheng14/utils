@@ -6,9 +6,11 @@ export default defineConfig({
     target: 'esnext',
     sourcemap: true,
     lib: {
-      entry: 'src/index.ts',
+      entry: {
+        index: 'src/index.ts',
+        kotlin: 'src/kotlin.ts',
+      },
       formats: ['es'],
-      fileName: 'index',
     },
     minify: false,
   },
