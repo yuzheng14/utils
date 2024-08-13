@@ -1,5 +1,5 @@
 export { assignObjDefaultValue, assignObjValue, deepCopyPropsOfObj } from './obj'
 export { sleep } from './thread'
-export { throttle, range } from './utils'
+export { throttle, range, encode64, decode64 } from './utils'
 export type { RequiredKeys } from './utilityType'
 export { present } from './predicate'
